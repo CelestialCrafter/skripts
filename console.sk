@@ -1,0 +1,8 @@
+command /console [<text>]:
+	permission: admin.console	
+	trigger:
+		if arg-1 is set:
+			execute console command arg-1
+			send "Command executed in console!"
+		else:
+			send "You need to input a command to execute!"
