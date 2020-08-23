@@ -1,0 +1,11 @@
+command /promote [<player>] [<text>]:
+	permission: admin.promote
+	trigger:
+		if arg-1 is set:
+			if arg-2 is set:
+				execute console command "lp user %arg-1% parent set %arg-2%"
+				broadcast "&e&l%arg-1% &ahas been promoted to &e&l%arg-2%!!"
+			else:
+				send "You need to input the rank to give %arg-1%!"
+		else:
+			send "You need to input the player to promote!"
